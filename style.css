@@ -1,0 +1,23 @@
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Press Start 2P", system-ui;
+  align-items: center;
+  text-align: center;
+}
+
+.retro {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  text-decoration: none;  /* remove underline */
+  color: white;
+  background: black;
+  border: 12px solid white;
+  cursor: pointer;
+}
