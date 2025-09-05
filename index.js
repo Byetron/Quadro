@@ -1,3 +1,11 @@
+window.onload = function() {
+  // Check if user already verified
+  if (localStorage.getItem("verified") === "true") {
+    document.getElementById("age-modal").style.display = "none";
+    document.getElementById("content").style.display = "block";
+  }
+};
+
 document.getElementById("submitAge").addEventListener("click", function() {
   const age = parseInt(document.getElementById("age").value);
   const modal = document.getElementById("age-modal");
@@ -8,17 +16,19 @@ document.getElementById("submitAge").addEventListener("click", function() {
   }
 
   if (age < 10) {
-    modal.innerHTML = "<p style='color: red;'> You must be at least 10 years old to access this site.</p>";
+    modal.innerHTML = "<p style='color:red;'>You must be at least 10 years old to access this site.</p>";
     setTimeout(() => {
       window.location.href = "https://www.google.com";
     }, 1500);
   } 
   
-  else {
-    modal.innerHTML = "<p style='color:green;'> Don't dilly dally!</p>";
-    setTimeout(() => {modal
-      modal.style.display = "none"; 
-      document.getElementById("content").style.display = "block"; 
+ else {
+    modal.innerHTML = "<p style='color:green;'>Don't dilly dally!</p>";
+    // Save verification in localStorage
+    localStorage.setItem("verified", "true");
+    setTimeout(() => {
+      modal.style.display = "none";
+      document.getElementById("content").style.display = "block";
     }, 1500);
   }
 });
