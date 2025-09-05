@@ -1,23 +1,77 @@
-.press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   font-family: "Press Start 2P", system-ui;
-  align-items: center;
   text-align: center;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
 
-.retro {
-  display: inline-block;
-  padding: 10px 20px;
-  font-family: "Press Start 2P", cursive;
-  font-size: 12px;
-  text-decoration: none;  /* remove underline */
-  color: white;
-  background: black;
-  border: 12px solid white;
-  cursor: pointer;
+h1 {
+  margin-bottom: 20px;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card a {
+  text-decoration: none;  
+  color: black;       
+}
+
+/* Modal overlay with blur */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2); /* semi-transparent dark */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);   /* 🔥 blur effect */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  z-index: 9999;
+}
+
+/* Modal box */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+#age {
+  width: 50px; 
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px solid black;
+  text-align: center; 
+}
+
+
+#submitAge{
+  text-align: center;
+  font-family: "Press Start 2P", system-ui;
+  background-color: white; 
+  border: 2px solid black;
 }

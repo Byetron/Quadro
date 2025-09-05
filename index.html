@@ -8,12 +8,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Pick your poison</h1>
-    <div id = "games">
-        <a href="html/dice.html" class="retro">Roll Dice</a>
-        <a href="html/guess.html" class="retro">Guessing Game</a><br> <br>
-        <a href="html/hand.html" class="retro">Rock Paper Scissors</a>
-        <a href="html/wack.html" class="retro">Whack a Mole</a>
+  <h1>Quadro</h1>
+  
+  <div id="age-modal" class="modal">
+    <div class="modal-content">
+      <h2>Age Verification</h2>
+      <label for="age">Enter your age:</label>
+      <input type="number" id="age" min="1"><br><br>
+      <button id="submitAge">Submit</button>
+      <p id="alert" style="margin-top: 10px; color: black;"></p>
     </div>
+  </div>
+
+  <div class="game">
+    <div class="card">
+      <a href = "dice.html"><h2>Roll the dice</h2></a>
+      <p>Lets go gambling!</p>
+    </div>
+    
+    <div class="card">
+      <a href = "guess.html"><h2>Guess the Number</h2></a>
+      <p>Guess a number between 1 and 100.</p>
+    </div>
+    
+    <div class="card">
+      <a href = "hand.html"><h2>Rock Paper Scissors</h2></a>
+      <p>Dare to find out who's got a better hand?</p>
+    </div>
+    
+    <div class="card">
+      <a href = "wack.html"><h2>Whack-a-Mole</h2></a>
+      <p>WHACK WHACK and MISS!</p>
+      <script src = "index.js"></script>
+    </div>
+  </div>
 </body>
 </html>
