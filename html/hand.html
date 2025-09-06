@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="/css/hand.css">
 </head>
 <body>
-    
+    <div id="initialScreen" class="screen">
+        <h1>Got what it takes to win against me?</h1><br><br>
+        <h2>My choice</h2>
+        <div id="comp"></div> <div class="container"><br><br>
+            <h2 id="myChoice"> Give it some thought. </h2>
+            <button class="box" id="rock">Rock</button>
+            <button class="box" id="paper">Paper</button>
+            <button class="box" id="scissors">Scissors</button>   
+        </div>
+    </div>
+
+    <div id="resultScreen" class="screen hidden">
+        <h1 id="result">The accumulation of your choices are thus</h1><br><br>
+        <h2 id="fin"></h2>
+    </div>
+
+    <script src="/javascript/hand.js"></script>
 </body>
 </html>

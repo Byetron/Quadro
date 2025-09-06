@@ -1,0 +1,75 @@
+h1 {
+    text-align: center;
+    text-wrap: balance;
+    font-family: "Press Start 2P", system-ui;
+    margin-top: 40px;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #f0f0f0;
+    font-family: "Press Start 2P", system-ui;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#comp {
+    width: 200px; /* Set a fixed size for the image container */
+    height: 200px;
+    background-color: #333; /* Dark background */
+    border: 2px solid #f0f0f0; /* Simple border */
+    display: block; /* Ensures it acts as a block-level element */
+    margin: 20px auto; /* Centers the box */
+    padding: 0; /* Remove padding */
+    box-sizing: border-box; /* Ensures border and padding are included in the element's total width and height */
+    
+    /* Image display properties */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* This might need adjustment */
+}
+
+#fin {
+    text-align: center;
+    text-wrap: balance;
+    font-family: "Press Start 2P", system-ui;
+    margin-top: 100px; /* Increased margin to push it down */
+    max-width: 70%; /* Limits the width of the text block */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    font-family: "Press Start 2P", system-ui;
+    background-color: black;
+    color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.screen {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
+
+.hidden {
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
