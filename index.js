@@ -6,6 +6,10 @@ window.onload = function() {
   }
 };
 
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
 document.getElementById("submitAge").addEventListener("click", function() {
   const age = parseInt(document.getElementById("age").value);
   const modal = document.getElementById("age-modal");
