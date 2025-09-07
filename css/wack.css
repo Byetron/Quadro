@@ -1,0 +1,185 @@
+h1 {
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 2.0rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+}
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Press Start 2P', system-ui;
+  margin: 0;
+  padding: 20px;
+}
+
+#game-card {
+  display: inline-block;
+  background: #111;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.hole {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.hole.disabled {
+  pointer-events: none;
+}
+
+.mole {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  transition: bottom 0.3s;
+}
+
+.mole.up {
+  bottom: 0;
+}
+
+button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 1.0rem;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 #000;
+}h1 {
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 2.0rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+}
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Press Start 2P', system-ui;
+  margin: 0;
+  padding: 20px;
+}
+
+#game-card {
+  display: inline-block;
+  background: #111;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.hole {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #333;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.hole.disabled {
+  pointer-events: none;
+}
+
+.mole {
+  position: absolute;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  background: #8b4513; /* Brown for mole body */
+  border-radius: 50% 50% 30% 30%;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.mole::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  box-shadow: 30px 0 0 #000; /* Second eye */
+}
+
+.mole.up {
+  bottom: 0;
+  animation: popUp 0.3s ease-in-out;
+}
+
+.mole.whacked {
+  background: #ff4500; /* Orange-red for whacked effect */
+  transform: translateX(-50%) scale(0.8);
+  animation: whack 0.3s ease-in-out;
+}
+
+button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Press Start 2P', system-ui;
+  font-size: 1.0rem;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  cursor: pointer;
+  text-shadow: 1px 1px 0 #000;
+}
+
+@keyframes popUp {
+  0% { bottom: -100%; transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+  100% { bottom: 0; transform: translateX(-50%) scale(1); }
+}
+
+@keyframes whack {
+  0% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(0.7); }
+  100% { transform: translateX(-50%) scale(0.8); }
+}
