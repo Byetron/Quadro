@@ -16,11 +16,11 @@ function play(choice) {
 
     // Set the background image based on the computer's choice
     if (compChoice === "Rock") {
-        compBox.style.backgroundImage = "url('/images/rock.png')";
+        compBox.style.backgroundImage = "url('/images/hand/rock.png')";
     } else if (compChoice === "Paper") {
-        compBox.style.backgroundImage = "url('/images/paper.png')";
+        compBox.style.backgroundImage = "url('/images/hand/paper.png')";
     } else { // Scissors
-        compBox.style.backgroundImage = "url('/images/scissors.png')";
+        compBox.style.backgroundImage = "url('/images/hand/scissors.png')";
     }
 
     if (choice === compChoice) {

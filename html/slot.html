@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');</style>
-    <title>Dice</title>
-    <link rel="stylesheet" href="/css/dice.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Slot Machine</title>
+  <link rel="stylesheet" href="/css/slot.css">
 </head>
 <body>
-    <h1>Roll the dice!</h1>
-    <script src = "/javascript/dice.js"></script>
+  <h1>Jackpot Machine</h1>
+  <div class="slot-machine">
+    <div class="reels">
+      <div class="reel" id="reel1"></div>
+      <div class="reel" id="reel2"></div>
+      <div class="reel" id="reel3"></div>
+    </div>
+    <button id="spin-button">SPIN</button>
+    <p id="result"></p>
+  </div>
+  <script src="/javascript/slot.js"></script>
 </body>
 </html>
