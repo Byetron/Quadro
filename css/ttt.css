@@ -1,0 +1,73 @@
+#header {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-top: 20px;
+    color: white; 
+    text-shadow: 2px 2px 4px #000000;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#card {
+    background-color: #1c1a1a; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px white; 
+    text-align: center;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    background-color: white; 
+    border: 6px solid black;
+    line-height: 100px;
+}
+
+.cell.x::after {
+    content: "X";
+    font-family: "Press Start 2P", system-ui;
+    font-size: medium;
+    color: #ff0000;
+}
+
+.cell.o::after {
+    content: "O";
+    font-family: "Press Start 2P", system-ui;
+    font-size: medium;
+    color: #00ff00;
+}
+
+#cellContainer {
+    display: grid;
+    color: white;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    width: 306px;
+    margin: 20px auto;
+}
+
+#gameStatus {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 10px;
+}
+
+#resetButton {
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', cursive;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 0;
+    margin-top: 20px;
+}
