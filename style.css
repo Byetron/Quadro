@@ -56,10 +56,8 @@ h1 {
   max-width: 100%;
   border-radius: 8px;
   margin-bottom: 12px;
-  /* No inversion anymore — images keep original colors */
 }
 
-/* ========== Modal Overlay (Age Check) ========== */
 .modal {
   position: fixed;
   top: 0;
