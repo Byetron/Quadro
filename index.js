@@ -28,7 +28,6 @@ document.getElementById("submitAge").addEventListener("click", function() {
   
   else {
     modal.innerHTML = "<p style='color:green;'>Don't dilly dally!</p>";
-    // Save verification in localStorage
     localStorage.setItem("verified", "true");
     setTimeout(() => {
       modal.style.display = "none";
